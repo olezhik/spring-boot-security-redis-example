@@ -1,0 +1,13 @@
+**.project
+**.iml
+**.settings
+**.classpath
+**.springBeans
+**.DS_Store
+**target/
+**.idea/
+**test-output/
+**.log
+**eclipse_config/
+**.pmd
+**.rdb
