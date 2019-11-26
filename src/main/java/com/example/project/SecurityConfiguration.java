@@ -22,6 +22,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
 		auth
@@ -29,6 +32,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.passwordEncoder(passwordEncoder());
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	protected void configure(final HttpSecurity http) throws Exception {
 		http
@@ -40,6 +46,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			   .httpBasic();
 	}
 
+	/**
+	 * This is the encoder to work with the user password.
+	 */
 	@Bean
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();

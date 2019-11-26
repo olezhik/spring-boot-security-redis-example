@@ -12,7 +12,7 @@ import com.example.project.model.User;
 import com.example.project.repository.UserRepository;
 
 /**
- * User details service.
+ * A custom user details service implementation to supply user credentials from the storage.
  */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -20,6 +20,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
 	private UserRepository repository;
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException { //NOSONAR
 		Optional<User> optional = repository.findById(username);

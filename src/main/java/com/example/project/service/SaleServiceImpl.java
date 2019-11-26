@@ -22,7 +22,9 @@ public class SaleServiceImpl implements SaleService {
 		this.repository = repository;
 	}
 
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public List<Sale> findAll() {
 		List<Sale> sales = new ArrayList<>();
@@ -30,6 +32,9 @@ public class SaleServiceImpl implements SaleService {
 		return sales;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public Sale saveOrUpdate(final Sale sale) {
 		return repository.save(sale);

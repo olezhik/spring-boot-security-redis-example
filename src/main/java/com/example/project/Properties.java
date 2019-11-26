@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 
 import lombok.Getter;
 
+/**
+ * This is a container class to keep the application properties.
+ * It's loaded during the context initialization from the `application.properties` file.
+ */
 @Getter
 @Component
 public class Properties {

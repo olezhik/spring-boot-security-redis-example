@@ -20,7 +20,7 @@ public interface SaleService {
 	 * Saves the input sale.
 	 *
 	 * @param sale {@link Sale}
-	 * @return The saved sale entity.
+	 * @return the saved sale entity with generated Id
 	 */
 	Sale saveOrUpdate(Sale sale);
 }

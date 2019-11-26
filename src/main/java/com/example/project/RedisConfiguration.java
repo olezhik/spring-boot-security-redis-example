@@ -12,7 +12,7 @@ import com.example.project.model.User;
 import com.example.project.repository.UserRepository;
 
 /**
- * Redis server configuration. An embedded Redis server starts and a default user is added.
+ * Redis server configuration, {@link JedisConnectionFactory} used.
  */
 @Configuration
 public class RedisConfiguration {
@@ -31,6 +31,9 @@ public class RedisConfiguration {
 		return new JedisConnectionFactory();
 	}
 
+	/**
+	 * Creates a default user during the application start. The user credentials can be updated in the `application.properties` file.
+	 */
 	@PostConstruct
 	public void createDefaultUser() {
 		userRepository.save(User.builder()
