@@ -18,12 +18,17 @@ import com.example.project.service.SaleService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
 
 /**
  * This controller provides endpoints to work with the {@link Sale} entity.
  */
 @RestController
-@Api(value="sale-controller", description="Provides functionality to work with Sales.")
+@Api(tags = {"sale-controller"})
+@SwaggerDefinition(tags = {
+	@Tag(name = "sale-controller", description = "Provides functionality to work with Sales.")
+})
 public class SaleController {
 
 	private SaleService service;
